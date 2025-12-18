@@ -1,45 +1,25 @@
-# FixIt – Online Marketplace for Local Services
+# FixIt – Local Worker Booking Platform
 
-FixIt is a full-stack web application that connects users with local service providers such as electricians, plumbers, and home maintenance professionals. The platform allows users to discover services easily, while service providers can manage bookings efficiently through an admin dashboard.
+A full-stack web application that connects customers with local service providers
+such as plumbers, electricians, cleaners, painters, and more — for on-demand
+home services.
 
----
-
-## 🚀 Features
-
-### User Side
-- Browse and search local services
-- User authentication and authorization
-- Service booking and management
-- Responsive and user-friendly UI
-
-### Admin Panel
-- Manage service providers
-- View and manage bookings
-- Secure admin authentication
-
-### Backend
-- RESTful APIs
-- Secure authentication using JWT
-- Database management with MongoDB
+Built with **React, Node.js, MongoDB, Cloudinary**, and **payment integration**.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Tech Stack
 
-### Frontend
-- React (Vite)
-- Tailwind CSS
-- JavaScript
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- JWT Authentication
-
-### Admin Panel
-- React (Vite)
-- Tailwind CSS
+| Layer | Technology |
+|-----|-----------|
+| Frontend | React (Vite) + Tailwind CSS |
+| Backend | Node.js + Express.js |
+| Database | MongoDB + Mongoose |
+| Authentication | JWT (JSON Web Token) |
+| Image Upload | Cloudinary |
+| Payments | Razorpay |
+| State Management | React Context API |
+| Deployment Ready | Vercel / Render |
 
 ---
 
@@ -48,45 +28,100 @@ FixIt is a full-stack web application that connects users with local service pro
 ```bash
 fixit-online-marketplace-for-local-services/
 │
-├── frontend/        # User-facing application
+├── frontend/        # Customer-facing application
 ├── admin/           # Admin dashboard
 ├── backend/         # Backend API
 └── README.md
-
-
-
-⚙️ How to Run the Project Locally
-1️⃣ Clone the repository
-git clone https://github.com/AcharyaRam/fixit-online-marketplace-for-local-services.git
-
-2️⃣ Install dependencies
-Backend
-cd backend
-npm install
-npm start
-
-Frontend
-cd frontend
-npm install
-npm run dev
-
-Admin Panel
-cd admin
-npm install
-npm run dev
-
 🔐 Environment Variables
-
-Create a .env file in the backend folder and add:
-
+Frontend (frontend/.env)
+env
+Copy code
+VITE_BACKEND_URL=http://localhost:5000
+Backend (backend/.env)
+env
+Copy code
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+JWT_SECRET=your_jwt_secret
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+RAZORPAY_KEY_ID=your_key_id
+RAZORPAY_KEY_SECRET=your_key_secret
+
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD=admin123
+▶️ How to Run the Project
+Step 1: Install dependencies
+Backend
+bash
+Copy code
+cd backend
+npm install
+Frontend
+bash
+Copy code
+cd frontend
+npm install
+Admin
+bash
+Copy code
+cd admin
+npm install
+Step 2: Start the servers
+Backend
+bash
+Copy code
+cd backend
+npm start
+Backend runs at:
+
+arduino
+Copy code
+http://localhost:5000
+Frontend
+bash
+Copy code
+cd frontend
+npm run dev
+Frontend runs at:
+
+arduino
+Copy code
+http://localhost:5173
+Admin Panel
+bash
+Copy code
+cd admin
+npm run dev
+Admin runs at:
+
+arduino
+Copy code
+http://localhost:5174
+🌐 Access URLs
+Role	URL
+Customer Home	http://localhost:5173
+User Login	http://localhost:5173/login
+Admin Panel	http://localhost:5174
+
+🔮 Future Scope
+Add real-time chat between customer and service provider
+
+Implement reviews & ratings
+
+Enable location-based service discovery
+
+Add notifications (Email / SMS)
+
+Dark mode support
 
 👨‍💻 Author
-
 Ram Acharya
 
 GitHub: https://github.com/AcharyaRam
 
 LinkedIn: https://linkedin.com/in/ram-acharya-b9b62326b
+
