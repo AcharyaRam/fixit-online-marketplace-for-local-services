@@ -106,18 +106,6 @@ This project is open source and available for educational use.
 
 ---
 
-## ✅ How to Add This to Your Project
-
-1. Create a new file in your main project folder (`fixit-project/`) called `README.md`
-2. Paste the entire content above
-3. Save it
-4. Commit and push to GitHub:
-```bash
-git add README.md
-git commit -m "Add README with setup instructions"
-git push
-```
-
 
 
 
